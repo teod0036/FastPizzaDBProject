@@ -29,19 +29,19 @@ namespace FastPizzaProject
             }
         }
 
-        public static void UpdateMeals(MealsModel meal)
+        public static void UpdateMeals(MealsModel meal, int ID)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-
+                cnn.Execute("UPDATE Meals SET " + ID + " = @Meal", meal);
             }
         }
 
-        public static void DeleteMeals(MealsModel meal)
+        public static void DeleteMeals(MealsModel meal, int ID)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-
+                cnn.Execute("UPDATE FROM Meals WHERE Meal_ID = " + ID, meal);
             }
         }
 
