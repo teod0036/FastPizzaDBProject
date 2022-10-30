@@ -1,0 +1,14 @@
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\bin\Debug\FastPizzaDB.db
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\bin\Debug\FastPizzaProject.exe.config
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\bin\Debug\FastPizzaProject.exe
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\bin\Debug\FastPizzaProject.pdb
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\bin\Debug\Dapper.dll
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\bin\Debug\System.Data.SQLite.dll
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\bin\Debug\Dapper.xml
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\bin\Debug\System.Data.SQLite.xml
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\obj\Debug\FastPizzaProject.csproj.AssemblyReference.cache
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\obj\Debug\FastPizzaProject.csproj.SuggestedBindingRedirects.cache
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\obj\Debug\FastPizzaProject.csproj.CoreCompileInputs.cache
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\obj\Debug\FastPizzaProject.csproj.CopyComplete
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\obj\Debug\FastPizzaProject.exe
+C:\Programmering\Aflevering\FastPizzaDBProject\FastPizzaProject\obj\Debug\FastPizzaProject.pdb

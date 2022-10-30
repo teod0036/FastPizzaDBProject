@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,57 +14,95 @@ namespace FastPizzaProject
     {
         public static List<MealsModel> ReadMeals()
         {
-
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<MealsModel>("SELECT * FROM Meals", new DynamicParameters());
+                return output.ToList();
+            }
         }
 
-        public static void CreateMeals()
+        public static void CreateMeals(MealsModel meal)
         {
-
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("INSERT INTO Meals (Meal) VALUES (@Meal)", meal);
+            }
         }
 
-        public static void UpdateMeals()
+        public static void UpdateMeals(MealsModel meal)
         {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
 
+            }
         }
 
-        public static void DeleteMeals()
+        public static void DeleteMeals(MealsModel meal)
         {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
 
+            }
         }
 
-        public static List<UsersModel> ReadUsers()
+        public static List<UsersModel> ReadUsers(UsersModel user)
         {
-
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<UsersModel>("SELECT * FROM Meals", new DynamicParameters());
+                return output.ToList();
+            }
         }
 
-        public static List<RestaurantsModel> ReadRestaurants()
+        public static List<RestaurantsModel> ReadRestaurants(RestaurantsModel restaurant)
         {
-
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<RestaurantsModel>("SELECT * FROM Meals", new DynamicParameters());
+                return output.ToList();
+            }
         }
 
-        public static List<InventoryModel> ReadInventory()
+        public static List<InventoryModel> ReadInventory(InventoryModel Inventory)
         {
-
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<InventoryModel>("SELECT * FROM Meals", new DynamicParameters());
+                return output.ToList();
+            }
         }
 
-        public static void UpdateInventory()
+        public static void UpdateInventory(InventoryModel Inventory)
         {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
 
+            }
         }
 
-        public static List<OrdersModel> ReadOrders()
+        public static List<OrdersModel> ReadOrders(OrdersModel order)
         {
-
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<OrdersModel>("SELECT * FROM Meals", new DynamicParameters());
+                return output.ToList();
+            }
         }
 
-        public static void CreateOrders()
+        public static void CreateOrders(OrdersModel order)
         {
-
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("INSERT INTO orders (Meal_ID, Restaurant_ID, USER_ID) VALUES (@Meal_ID, @Restaurant_ID, @USER_ID)", order);
+            }
         }
 
-        public static void DeleteOrders()
+        public static void DeleteOrders(OrdersModel order)
         {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
 
+            }
         }
 
         private static string LoadConnectionString(string id = "Default")
